@@ -1,0 +1,9 @@
+common:
+
+  database: "sqlite:///avcp_contracts.db"
+  prefix: dumps/
+  format: csv
+
+exports:
+  - query: "SELECT contracts.cig, contracts.pubblication_date, contracts.oggetto, contracts.importoAggiudicazione, public_agencies.agency_fiscal_code, public_agencies.agency_name, all_winners.vendor_code, all_winners.vendor_name, contracts.sceltaContraente, contracts.importoSommeLiquidate FROM contracts LEFT JOIN public_agencies ON contracts.agency_fiscal_code = public_agencies.agency_fiscal_code LEFT JOIN all_winners ON contracts.cig = all_winners.cig"
+    filename: "avcp_contracts.csv"
