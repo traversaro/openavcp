@@ -18,7 +18,6 @@ a sqlite database named `avcp_contracts.db`.
 
 It is then possible to dump a csv version of this database using 
 the [datafreeze](https://dataset.readthedocs.org/en/latest/freezefile.html) tool:
-
-``
+```
 datafreeze openspending_freeze.yaml 
-``
+```
