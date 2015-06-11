@@ -49,7 +49,7 @@ import dataset
 import sqlalchemy
 
 #Year to scrape
-years_to_download = range(2011,2015)
+years_to_download = range(2011,2016)
 months_in_a_year = range(1,13)
 
 database_name = "avcp_contracts.db"
